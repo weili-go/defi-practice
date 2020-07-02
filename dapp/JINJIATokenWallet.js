@@ -25,12 +25,14 @@ let overrides = {
 let wallet = undefined;
 
 const createWalet = async ()=> {
-    const randomWallet = ethers.Wallet.createRandom();
-    const _wallet1 = ethers.Wallet.fromMnemonic(randomWallet.signingKey.mnemonic);
-    console.log("Wallet Address: ", _wallet1.address);
-    qrcode.generate(_wallet1.address, { small: true });
-    console.log("Wallet Private Key(Note!Strictly CConfidential): ",_wallet1.privateKey);
-    console.log("Mnemonic(Note!Strictly CConfidential) :",randomWallet.signingKey.mnemonic);
+    const wallet1 = ethers.Wallet.createRandom();
+    console.log("Wallet Address: ", wallet1.address);
+    qrcode.generate(wallet1.address, { small: true });
+    console.log("Wallet Private Key(Note!Strictly CConfidential): ",wallet1.privateKey);
+    console.log("Mnemonic(Note!Strictly CConfidential) :",wallet1.mnemonic.phrase);
+
+    //let s = ethers.Wallet.fromMnemonic(wallet1.mnemonic.phrase);
+    //console.log("Wallet Address: ", s.privateKey);
 }
 
 const unlockWalletWithPKey = async (pkey)=> {
