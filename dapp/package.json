@@ -1,0 +1,23 @@
+{
+  "name": "dapp",
+  "version": "1.0.0",
+  "description": "Interact with smart contract",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "WeiLi",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.0.3",
+    "web3-utils": "^1.2.9",
+    "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "qrcode": "^1.4.4",
+    "qrcode-terminal": "^0.12.0",
+    "readline-sync": "^1.4.10",
+    "solc": "^0.6.6",
+    "util": "^0.12.3"
+  }
+}
